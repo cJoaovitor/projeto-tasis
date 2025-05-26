@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-print("mais folego");
+runApp(const MaterialApp(home: HomePage,));
 }
 
 
