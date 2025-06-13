@@ -18,6 +18,7 @@ class _mascoteState extends State<mascote> {
   }
 
   buildbody() {
+    int moedas = 233230;
     String a =
         'https://s3.amazonaws.com/media.wikiaves.com.br/images/6255/5526892_beb29b4d03b0fa7762b2e2ab11d3e753.jpg';
     String plano_fundo =
@@ -32,12 +33,13 @@ class _mascoteState extends State<mascote> {
           ),
         ),
         child: Scaffold(
+
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             backgroundColor:Colors.blueAccent ,
             title: Row(
               children: [  Icon(Icons.currency_exchange),
-                Text("00000"),],
+                Text("$moedas"),],
             ),
             actions: [
               ElevatedButton(onPressed: (){}, child:   Text("menu",
@@ -49,20 +51,18 @@ class _mascoteState extends State<mascote> {
 
             ],
           ),
-          body: Container(
-
-            child: Column(
-              children: [
-                Column(
-                  children: [
-                    Column(
-                      children: [
-                      ],
-                    ),
-                  ],
-                ),
-              ],
-            ),
+          bottomNavigationBar: BottomNavigationBar(items: [
+            BottomNavigationBarItem(icon: Icon(Icons.backpack_sharp),label: "inventario"),
+            BottomNavigationBarItem(icon: Icon(Icons.play_arrow),label: "START")
+          ]),
+          body: Container (
+            padding: EdgeInsets.only(top: 400),
+            width: MediaQuery.of(context).size.width,
+              child: Image.network(
+                'https://drive.google.com/uc?export=download&id=1_P82tNxOzh_wL0NzPehltCf9AxVOcj_C',
+                width: 200,
+                height: 150,
+              ),
           ),
         ),
       ),
