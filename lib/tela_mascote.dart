@@ -18,7 +18,7 @@ class _mascoteState extends State<mascote> {
   }
 
   buildbody() {
-    int moedas = 233230;
+    int moedas = 99999999;
     String a =
         'https://s3.amazonaws.com/media.wikiaves.com.br/images/6255/5526892_beb29b4d03b0fa7762b2e2ab11d3e753.jpg';
     String plano_fundo =
@@ -56,7 +56,7 @@ class _mascoteState extends State<mascote> {
             BottomNavigationBarItem(icon: Icon(Icons.play_arrow),label: "START")
           ]),
           body: Container (
-            padding: EdgeInsets.only(top: 400),
+            padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.48),
             width: MediaQuery.of(context).size.width,
               child: Image.network(
                 'https://drive.google.com/uc?export=download&id=1_P82tNxOzh_wL0NzPehltCf9AxVOcj_C',
